@@ -377,7 +377,7 @@ module Readthis
     #
     def exist?(key, options = {})
       invoke(:exist?, key) do |store|
-        store.exists(namespaced_key(key, merged_options(options)))
+        store.exists?(namespaced_key(key, merged_options(options)))
       end
     end
 
